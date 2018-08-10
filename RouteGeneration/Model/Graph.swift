@@ -8,46 +8,68 @@
 
 import Foundation
 
-class Node {
-    private var _id: String!
+//Node Class BluePrint
+class Node: Hashable {
     
-    var id: String {
-        if _id == nil {
-            _id = ""
-        }
-        return _id
+    var hashValue: Int
+    
+    static func == (lhs: Node, rhs: Node) -> Bool {
+        return lhs.hashValue == rhs.hashValue
     }
     
-    init(id: String) {
-        self._id = id
+    private var _name: String!
+    private var _address: String!
+    private var _latitude: String!
+    private var _longitude: String!
+
+    
+    var name: String {
+        return _name
+    }
+    
+    var address: String {
+        return _address
+    }
+    
+    var latitude: String {
+        return _latitude
+    }
+    
+    var longitude: String {
+        return _longitude
+    }
+    
+    init(name: String, address: String, latitude: String, longitude: String) {
+        self._name = name
+        self._address = address
+        self._latitude = latitude
+        self._longitude = longitude
+        if let val1 = Double(latitude), let val2 = Double(longitude) {
+            self.hashValue = Int(val1 * val2 * 10000)
+        } else {
+            self.hashValue = -1
+        }
     }
     
     var visited = false
     var modelconnections: [Neighbours] = [Neighbours]()
 }
 
+//Edge Class Blueprint
 class Neighbours {
     public let neighbour: Node
-    public let weight: Double
-    
-    public init(node: Node, weight: Double) {
-        self.neighbour = node
-        self.weight = weight
-    }
-}
+    private var _weight: Double!
 
-class Path {
-    public let cumulativeWeight: Double
-    public let node: Node
-    public let previousPath: Path?
-    
-    init(node: Node, neighbour: Neighbours? = nil, previousPath path: Path? = nil) {
-        if let previousPath = path, let neighbour = neighbour {
-            self.cumulativeWeight = neighbour.weight + previousPath.cumulativeWeight
-        } else {
-            self.cumulativeWeight = 0
+    var weight: Double {
+        get {
+           return _weight
+        } set {
+            self._weight = newValue
         }
-        self.node = node
-        self.previousPath = path
+    }
+    
+    public init(node: Node, weight: Double? = nil) {
+        self.neighbour = node
+        self._weight = weight
     }
 }

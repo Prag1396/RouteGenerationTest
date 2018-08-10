@@ -14,7 +14,6 @@
 		DBED301F211A1F1A001875F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBED301D211A1F1A001875F6 /* LaunchScreen.storyboard */; };
 		DBED302A211A1F57001875F6 /* KioskCoords.csv in Resources */ = {isa = PBXBuildFile; fileRef = DBED3029211A1F57001875F6 /* KioskCoords.csv */; };
 		DBED302C211A2055001875F6 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED302B211A2055001875F6 /* csv.swift */; };
-		DBED302E211A2173001875F6 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED302D211A2173001875F6 /* RouteModel.swift */; };
 		DBED3030211A7217001875F6 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBED302F211A7217001875F6 /* Graph.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		DBED3020211A1F1A001875F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBED3029211A1F57001875F6 /* KioskCoords.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KioskCoords.csv; sourceTree = "<group>"; };
 		DBED302B211A2055001875F6 /* csv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
-		DBED302D211A2173001875F6 /* RouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
 		DBED302F211A7217001875F6 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +75,6 @@
 		DBED3026211A1F28001875F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DBED302D211A2173001875F6 /* RouteModel.swift */,
 				DBED302F211A7217001875F6 /* Graph.swift */,
 			);
 			path = Model;
@@ -175,7 +172,6 @@
 				DBED302C211A2055001875F6 /* csv.swift in Sources */,
 				DBED3017211A1F17001875F6 /* ViewController.swift in Sources */,
 				DBED3015211A1F17001875F6 /* AppDelegate.swift in Sources */,
-				DBED302E211A2173001875F6 /* RouteModel.swift in Sources */,
 				DBED3030211A7217001875F6 /* Graph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
